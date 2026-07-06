@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auro Adornment | Collections</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#faf7f3;
+color:#333;
+}
+
+/* Header */
+
+header{
+background:#fff;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+letter-spacing:2px;
+color:#b8860b;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:28px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+transition:.3s;
+font-weight:500;
+}
+
+nav a:hover,
+.active{
+color:#b8860b;
+}
+
+/* Hero */
+
+.hero{
+
+height:45vh;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1500&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+/* Heading */
+
+.section{
+padding:70px 0;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:40px;
+color:#b8860b;
+}
+
+.title p{
+margin-top:10px;
+color:#666;
+}
+
+/* Buttons */
+
+.filter{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:45px;
+}
+
+.filter button{
+
+padding:12px 28px;
+border:none;
+background:white;
+border:2px solid #d4af37;
+color:#b8860b;
+border-radius:30px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.filter button:hover{
+
+background:#d4af37;
+color:white;
+
+}
+
+/* Grid */
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+
+}
+
+/* Card */
+
+.card{
+
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+height:300px;
+object-fit:cover;
+
+}
+
+.content{
+
+padding:22px;
+
+}
+
+.content h3{
+
+margin-bottom:10px;
+
+}
+
+.content p{
+
+color:#777;
+font-size:15px;
+
+}
+
+.price{
+
+margin-top:15px;
+font-size:22px;
+color:#b8860b;
+font-weight:bold;
+
+}
+
+.btn{
+
+display:inline-block;
+margin-top:18px;
+padding:12px 25px;
+background:#b8860b;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#8c6700;
+
+}
+
+/* CTA */
+
+.cta{
+
+margin-top:80px;
+background:#b8860b;
+padding:60px;
+text-align:center;
+color:white;
+border-radius:15px;
+
+}
+
+.cta h2{
+
+font-size:40px;
+margin-bottom:20px;
+
+}
+
+.cta a{
+
+display:inline-block;
+margin-top:20px;
+padding:14px 35px;
+background:white;
+color:#b8860b;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+
+}
+
+/* Footer */
+
+footer{
+
+margin-top:70px;
+background:#222;
+color:#ddd;
+text-align:center;
+padding:40px 20px;
+
+}
+
+footer h2{
+
+color:#d4af37;
+margin-bottom:10px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+gap:18px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero{
+
+height:35vh;
+
+}
+
+.cta{
+
+padding:40px 20px;
+
+}
+
+.cta h2{
+
+font-size:30px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+
+<div class="logo">AURO ADORNMENT</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="collections.html" class="active">Collections</a></li>
+
+<li><a href="newarrivals.html">New Arrivals</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">register</a></li>
+<li><a href="favourites.html">favourites</a></li>
+<li><a href="recomend.html">recomend</a></li>
+<li><a href="recent.html">recently</a></li>
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Our Collections</h1>
+
+<p>Discover handcrafted luxury jewellery for every occasion.</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Explore Collections</h2>
+
+<p>Choose your favorite style and shine every day.</p>
+
+</div>
+
+<div class="filter">
+
+<button>All</button>
+<button>Necklaces</button>
+<button>Rings</button>
+<button>Earrings</button>
+<button>Bracelets</button>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<h3>Diamond Necklace</h3>
+<p>Elegant luxury necklace crafted with premium brilliance.</p>
+<div class="price">$499</div>
+<a href="diamondnecklace.html" class="btn">View Details</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<h3>Luxury Ring</h3>
+<p>Beautiful ring designed for unforgettable moments.</p>
+<div class="price">$299</div>
+<a href="luxuryring.html" class="btn">View Details</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<h3>Golden Bracelet</h3>
+<p>Classic bracelet with timeless elegance.</p>
+<div class="price">$349</div>
+<a href="goldenbracelet.html" class="btn">View Details</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<h3>Pearl Earrings</h3>
+<p>Graceful earrings perfect for every celebration.</p>
+<div class="price">$199</div>
+<a href="pearlearnings.html" class="btn">View Details</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<h3>Wedding Set</h3>
+<p>Luxury jewellery collection for your special day.</p>
+<div class="price">$999</div>
+<a href="weddingset.html" class="btn">View Details</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<h3>Rose Gold Ring</h3>
+<p>Minimalist beauty with luxurious craftsmanship.</p>
+<div class="price">$259</div>
+<a href="rosegoldring.html" class="btn">View Details</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603974372039-adc49044b6bd?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<h3>Charm Bracelet</h3>
+<p>Modern style designed for everyday elegance.</p>
+<div class="price">$189</div>
+<a href="charmbracelet.html" class="btn">View Details</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1619119069152-a2b331eb392a?auto=format&fit=crop&w=800&q=80">
+<div class="content">
+<h3>Luxury Pendant</h3>
+<p>Inspired by timeless sophistication and beauty.</p>
+<div class="price">$399</div>
+<a href="luxurypendant.html" class="btn">View Details</a>
+</div>
+</div>
+
+</div>
+
+<div class="cta">
+
+<h2>Find Your Perfect Jewellery</h2>
+
+<p>
+Every piece tells a story. Discover a collection that reflects your personality and style.
+</p>
+
+<a href="#">Shop Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Auro Adornment</h2>
+
+<p>Luxury Jewellery • Timeless Elegance • Crafted with Love</p>
+
+<br>
+
+<p>© 2026 Auro Adornment. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

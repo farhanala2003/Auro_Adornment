@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Favourites | Auro Adornment</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#f8f6f2;
+}
+
+/* Header */
+
+header{
+background:#fff;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+header h1{
+color:#b8860b;
+font-size:32px;
+}
+
+.count{
+background:#d4af37;
+color:white;
+padding:8px 18px;
+border-radius:25px;
+font-weight:bold;
+}
+
+/* Products */
+
+.container{
+width:90%;
+max-width:1300px;
+margin:40px auto;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.content{
+padding:20px;
+}
+
+.content h2{
+margin-bottom:10px;
+}
+
+.rating{
+color:#f4b400;
+margin-bottom:10px;
+}
+
+.price{
+font-size:26px;
+font-weight:bold;
+color:#b8860b;
+}
+
+.old{
+font-size:16px;
+text-decoration:line-through;
+color:#888;
+margin-left:10px;
+}
+
+.badge{
+display:inline-block;
+background:#d4af37;
+color:white;
+padding:6px 15px;
+border-radius:20px;
+margin:15px 0;
+font-size:13px;
+}
+
+.info{
+color:#666;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.buttons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+button{
+flex:1;
+padding:12px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+.cart{
+background:#d4af37;
+color:white;
+}
+
+.buy{
+background:#222;
+color:white;
+}
+
+.remove{
+background:#f1f1f1;
+}
+
+button:hover{
+transform:scale(1.03);
+}
+
+/* Empty Section */
+
+.more{
+margin-top:70px;
+text-align:center;
+}
+
+.more h2{
+color:#b8860b;
+margin-bottom:20px;
+}
+
+.more a{
+display:inline-block;
+padding:15px 35px;
+background:#d4af37;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.more a:hover{
+background:#a97c00;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1><i class="fa-solid fa-heart"></i> My Favourites</h1>
+
+<div class="count">
+3 Saved Items
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="products">
+
+<!-- Product 1 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80">
+
+<div class="content">
+
+<h2>Diamond Necklace</h2>
+
+<div class="rating">
+★★★★★ (4.9)
+</div>
+
+<div class="price">
+₹49,999
+<span class="old">₹59,999</span>
+</div>
+
+<div class="badge">
+💎 BIS Hallmarked
+</div>
+
+<div class="info">
+
+18K White Gold<br>
+
+Natural Diamonds<br>
+
+Lifetime Warranty<br>
+
+Free Shipping
+
+</div>
+
+<div class="buttons">
+
+<button class="cart">
+🛒 Add to Cart
+</button>
+
+<button class="buy">
+Buy Now
+</button>
+
+<button class="remove">
+🗑 Remove
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Product 2 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80">
+
+<div class="content">
+
+<h2>Luxury Ring</h2>
+
+<div class="rating">
+★★★★★ (4.8)
+</div>
+
+<div class="price">
+₹28,999
+<span class="old">₹34,999</span>
+</div>
+
+<div class="badge">
+✨ Certified Diamond
+</div>
+
+<div class="info">
+
+18K Gold<br>
+
+Elegant Finish<br>
+
+Gift Box Included<br>
+
+Easy Returns
+
+</div>
+
+<div class="buttons">
+
+<button class="cart">
+🛒 Add to Cart
+</button>
+
+<button class="buy">
+Buy Now
+</button>
+
+<button class="remove">
+🗑 Remove
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Product 3 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80">
+
+<div class="content">
+
+<h2>Gold Bracelet</h2>
+
+<div class="rating">
+★★★★★ (5.0)
+</div>
+
+<div class="price">
+₹18,499
+</div>
+
+<div class="badge">
+💛 22K Gold
+</div>
+
+<div class="info">
+
+Premium Finish<br>
+
+BIS Certified<br>
+
+Luxury Packaging<br>
+
+7-Day Returns
+
+</div>
+
+<div class="buttons">
+
+<button class="cart">
+🛒 Add to Cart
+</button>
+
+<button class="buy">
+Buy Now
+</button>
+
+<button class="remove">
+🗑 Remove
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="more">
+
+<h2>You May Also Like</h2>
+
+<a href="collections.html">
+Continue Shopping
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
