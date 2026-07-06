@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Auro Adornment</title>
+<title>About | Auro Adornment</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,32 +14,30 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#faf7f3;
+background:#faf8f5;
 color:#333;
-line-height:1.7;
 }
 
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-/* Header */
+/* Navbar */
 
 header{
-background:#fff;
 position:sticky;
 top:0;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
 z-index:999;
+background:rgba(255,255,255,.85);
+backdrop-filter:blur(15px);
+box-shadow:0 3px 15px rgba(0,0,0,.08);
 }
 
 .navbar{
+width:90%;
+max-width:1200px;
+margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -45,148 +46,213 @@ padding:18px 0;
 
 .logo{
 font-size:28px;
-font-weight:bold;
-color:#b8860b;
+font-weight:700;
 letter-spacing:2px;
+color:#c9a227;
 }
 
 nav ul{
 display:flex;
+gap:22px;
 list-style:none;
-gap:25px;
 }
 
 nav a{
 text-decoration:none;
-color:#333;
+color:#444;
+font-size:15px;
 font-weight:500;
 transition:.3s;
 }
 
-nav a:hover,
-.active{
-color:#b8860b;
+nav a:hover,.active{
+color:#c9a227;
 }
 
 /* Hero */
 
 .hero{
-height:45vh;
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url("https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1500&q=80");
-background-size:cover;
-background-position:center;
+height:80vh;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1600&q=80") center/cover;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-color:#fff;
+color:white;
+padding:20px;
 }
 
 .hero h1{
-font-size:50px;
-margin-bottom:10px;
+font-size:60px;
+margin-bottom:15px;
 }
 
-/* Sections */
-
-section{
-padding:70px 0;
+.hero p{
+font-size:20px;
+max-width:650px;
+margin:auto;
+color:#eee;
 }
+
+/* About */
 
 .about{
+width:90%;
+max-width:1200px;
+margin:90px auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:40px;
+grid-template-columns:1fr 1fr;
+gap:60px;
 align-items:center;
 }
 
 .about img{
 width:100%;
-border-radius:12px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
 }
 
-h2{
-color:#b8860b;
+.about h2{
+font-size:42px;
+color:#c9a227;
 margin-bottom:20px;
-font-size:35px;
 }
 
-p{
+.about p{
 color:#666;
+margin-bottom:20px;
+line-height:1.9;
+}
+
+/* Stats */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+.stat{
+background:white;
+padding:35px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.stat:hover{
+transform:translateY(-10px);
+}
+
+.stat h2{
+font-size:38px;
+color:#c9a227;
+}
+
+.stat p{
+color:#777;
 }
 
 /* Features */
 
 .features{
+width:90%;
+max-width:1200px;
+margin:90px auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:50px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-.box{
-background:#fff;
-padding:30px;
+.card{
+background:white;
+padding:35px;
+border-radius:18px;
 text-align:center;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-transition:.3s;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.4s;
 }
 
-.box:hover{
-transform:translateY(-8px);
+.card:hover{
+transform:translateY(-12px);
 }
 
-.box h3{
-color:#b8860b;
-margin-bottom:10px;
+.card span{
+font-size:45px;
+}
+
+.card h3{
+margin:15px 0;
+color:#c9a227;
 }
 
 /* CTA */
 
 .cta{
-background:#b8860b;
-color:#fff;
-padding:60px 20px;
+width:90%;
+max-width:1200px;
+margin:80px auto;
+background:linear-gradient(135deg,#c9a227,#e7c967);
+color:white;
+padding:70px 30px;
 text-align:center;
-border-radius:15px;
-margin-top:60px;
+border-radius:25px;
+}
+
+.cta h2{
+font-size:42px;
+margin-bottom:15px;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 30px;
-background:#fff;
+margin-top:25px;
+padding:15px 40px;
+background:white;
 color:#b8860b;
+font-weight:600;
+border-radius:40px;
 text-decoration:none;
-border-radius:30px;
-font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
 }
 
 /* Footer */
 
 footer{
-margin-top:70px;
-background:#222;
+background:#111;
 color:#ddd;
 text-align:center;
-padding:40px 20px;
+padding:40px;
+margin-top:70px;
 }
 
-footer h2{
+footer h3{
 color:#d4af37;
+margin-bottom:10px;
 }
 
-/* Responsive */
+@media(max-width:900px){
 
-@media(max-width:768px){
+.about{
+grid-template-columns:1fr;
+text-align:center;
+}
 
-.navbar{
-flex-direction:column;
-gap:15px;
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero h1{
+font-size:42px;
 }
 
 nav ul{
@@ -194,154 +260,143 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+}
+
+@media(max-width:600px){
+
+.stats{
+grid-template-columns:1fr;
+}
+
 .hero{
-height:35vh;
+height:60vh;
 }
 
 .hero h1{
-font-size:35px;
+font-size:34px;
+}
+
+.hero p{
+font-size:16px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
-<div class="container navbar">
-
+<div class="navbar">
 <div class="logo">AURO ADORNMENT</div>
 
 <nav>
-
 <ul>
-
 <li><a href="index.html">Home</a></li>
 <li><a href="collections.html">Collections</a></li>
 <li><a href="new-arrivals.html">New Arrivals</a></li>
 <li><a href="about.html" class="active">About</a></li>
 <li><a href="contact.html">Contact</a></li>
-<li><a href="login.html">login</a></li>
-<li><a href="register.html">register</a></li>
-<li><a href="favourites.html">favourites</a></li>
-<li><a href="recomend.html">recomend</a></li>
-<li><a href="recent.html">recent</a></li>
+<li><a href="login.html">Login</a></li>
 </ul>
-
 </nav>
 
 </div>
-
 </header>
 
 <section class="hero">
-
 <div>
-
-<h1>About Auro Adornment</h1>
-
-<p>Luxury Jewellery Crafted with Passion & Elegance</p>
-
+<h1>Crafting Timeless Elegance</h1>
+<p>Every piece at Auro Adornment is thoughtfully designed to celebrate beauty, confidence, and unforgettable moments.</p>
 </div>
-
 </section>
 
-<section>
-
-<div class="container about">
-
-<div>
+<section class="about">
 
 <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80">
 
-</div>
-
 <div>
-
 <h2>Our Story</h2>
-
 <p>
-
-At <strong>Auro Adornment</strong>, we believe jewellery is more than an accessory—it's a reflection of elegance, confidence, and cherished memories. Every design is carefully crafted to combine timeless beauty with modern sophistication.
-
+Auro Adornment was founded with a passion for creating jewellery that reflects elegance and individuality. Every collection blends modern craftsmanship with timeless luxury.
 </p>
 
-<br>
-
 <p>
-
-From sparkling rings to graceful necklaces and elegant bracelets, our collections are designed to make every occasion unforgettable.
-
+From dazzling diamond necklaces to graceful bracelets and rings, every design is made to become part of your life's most precious memories.
 </p>
-
-</div>
-
 </div>
 
 </section>
 
-<section>
+<section class="stats">
 
-<div class="container">
-
-<h2 style="text-align:center;">Why Choose Us?</h2>
-
-<div class="features">
-
-<div class="box">
-<h3>💎 Premium Quality</h3>
-<p>Finest craftsmanship with luxurious materials.</p>
+<div class="stat">
+<h2>10K+</h2>
+<p>Happy Customers</p>
 </div>
 
-<div class="box">
-<h3>✨ Elegant Designs</h3>
-<p>Modern collections inspired by timeless beauty.</p>
+<div class="stat">
+<h2>500+</h2>
+<p>Luxury Designs</p>
 </div>
 
-<div class="box">
-<h3>🎁 Perfect Gifts</h3>
-<p>Jewellery for birthdays, weddings and celebrations.</p>
+<div class="stat">
+<h2>99%</h2>
+<p>Customer Satisfaction</p>
 </div>
 
-<div class="box">
-<h3>❤️ Customer First</h3>
-<p>Dedicated service and a delightful shopping experience.</p>
+<div class="stat">
+<h2>24/7</h2>
+<p>Customer Support</p>
 </div>
 
+</section>
+
+<section class="features">
+
+<div class="card">
+<span>💎</span>
+<h3>Premium Quality</h3>
+<p>Certified jewellery crafted with perfection.</p>
 </div>
 
-<div class="cta">
-
-<h2 style="color:white;">Celebrate Every Moment with Auro Adornment</h2>
-
-<p>
-
-Discover jewellery that adds elegance to every story.
-
-</p>
-
-<a href="collections.html" class="btn">Explore Collections</a>
-
+<div class="card">
+<span>✨</span>
+<h3>Luxury Designs</h3>
+<p>Elegant collections for every celebration.</p>
 </div>
 
+<div class="card">
+<span>🎁</span>
+<h3>Perfect Gifts</h3>
+<p>Beautiful jewellery for unforgettable moments.</p>
 </div>
 
+<div class="card">
+<span>❤️</span>
+<h3>Trusted Brand</h3>
+<p>Exceptional shopping experience with secure service.</p>
+</div>
+
+</section>
+
+<section class="cta">
+<h2>Discover Your Sparkle</h2>
+<p>Celebrate life's precious moments with jewellery designed to shine forever.</p>
+<a href="collections.html" class="btn">Explore Collection</a>
 </section>
 
 <footer>
-
-<h2>Auro Adornment</h2>
-
-<p>Luxury Jewellery • Timeless Elegance • Crafted with Love</p>
-
+<h3>AURO ADORNMENT</h3>
+<p>Luxury Jewellery • Crafted With Love • Timeless Beauty</p>
 <br>
-
 <p>© 2026 Auro Adornment. All Rights Reserved.</p>
-
 </footer>
 
 </body>
